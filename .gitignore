@@ -1,52 +1,24 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h> 
 
-# Linker output
-*.ilk
-*.map
-*.exp
+int sum(int n) 
+{ 
 
-# Precompiled Headers
-*.gch
-*.pch
+    if (n == 0) 
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+       return 0; 
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+    return (n % 10 + sum(n / 10)); 
+} 
+int main() 
+{ 
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+    int num = 1234; 
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+    int result = sum(num); 
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+    printf("Sum of digits in %d is %d\n", num, result); 
+
+    return 0; 
+} 
+    
